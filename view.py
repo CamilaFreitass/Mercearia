@@ -1,6 +1,9 @@
 import controller
 import os.path
 
+# este * antes do nome significa que posso passar quantos parametros eu queira,
+# que ele vai emapacotar tudo dentro de uma tupla
+
 def criarArquivos(*nome):
     for i in nome:
         if not os.path.exists(i):
@@ -12,6 +15,10 @@ criarArquivos("categoria.txt", "clientes.txt",
               "estoque.txt", "fornecedores.txt",
               "funcionarios.txt", "venda.txt")
 
+# Esse "if __name__ == "__main__" significa que isso só vai retornar verdadeiro se eu executar
+# meu arquivo apartir dele mesmo, ou seja, eu estou executando meu código por ele mesmo
+# tudo que está dentro desse "if" só vai ser executado se eu rodar a view por ela mesmo
+# a view tem que ser o primeiro arquivo que vou rodar no meu sistema
 
 if __name__ == "__main__":
     while True:
